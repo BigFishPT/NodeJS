@@ -1,2 +1,2 @@
 # NodeJS
-This repo contains code regarding NodeJS language 
+This repo contains code regarding NodeJS runtime 
