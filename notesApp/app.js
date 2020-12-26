@@ -1,5 +1,7 @@
-require('./utils.js')
+const validator = require('validator')
+const getNotes = require('./notes.js')
 
-const name = 'Joao'
+const myNotes = getNotes()
 
-console.log(name)
+console.log(myNotes)
+console.log(validator.isEmail('teste'))
