@@ -49,6 +49,17 @@ const userSchema = mongoose.Schema({
     }]
 })
 
+//schema to manipule User data in the return JSON
+userSchema.methods.toJSON = function() {
+    const user = this
+    const userObject = user.toObject()
+
+    delete userObject.password
+    delete userObject.tokens
+
+    return userObject
+}
+
 
 //generate token for login
 userSchema.methods.generateAuthToken = async function () {
